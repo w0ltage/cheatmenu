@@ -1,0 +1,1 @@
+{"application": "burpsuite", "cheatsheet": [{"action": "Send to Repeater", "hotkey": "ctrl + r"}, {"action": "Send to Intruder", "hotkey": "ctrl + i"}, {"action": "Send to Target", "hotkey": "ctrl + shift + t"}, {"action": "Switch to proxy", "hotkey": "ctrl + shift + p"}, {"action": "Switch to scanner", "hotkey": "ctrl + shift + s"}]}
