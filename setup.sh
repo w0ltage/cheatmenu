@@ -10,7 +10,6 @@ fi
 printf "Creating soft link to %s/.config/cheatmenu\n" "$HOME"
 
 cheatmenu_directory="$XDG_CONFIG_HOME/cheatmenu" \
-    && mkdir "$cheatmenu_directory" \
     && ln -s "$PWD" "$cheatmenu_directory"
 
 if [[ $? -eq 1 ]]; then
