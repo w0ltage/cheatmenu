@@ -1,8 +1,0 @@
-application: burpsuite
-shortcuts:
-  send-to-interceptor: 
-    action: "Send to interceptor"
-    hotkey: "ctrl i"
-  send-to-repeater: 
-    action: "Send to repeater"
-    hotkey: "ctrl r"

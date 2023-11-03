@@ -1,0 +1,94 @@
+application: burpsuite
+shortcuts:
+- action: Send to repeater
+  hotkey: Ctrl+R
+- action: Send to intruder
+  hotkey: Ctrl+I
+- action: Send to organizer
+  hotkey: Ctrl+O
+- action: Forward intercepted proxy message
+  hotkey: Ctrl+F
+- action: Toggle proxy interception
+  hotkey: Ctrl+T
+- action: Issue repeater request
+  hotkey: Ctrl+Space
+- action: Switch to dashboard
+  hotkey: Ctrl+Shift+D
+- action: Switch to target
+  hotkey: Ctrl+Shift+T
+- action: Switch to proxy
+  hotkey: Ctrl+Shift+P
+- action: Switch to intruder
+  hotkey: Ctrl+Shift+I
+- action: Switch to repeater
+  hotkey: Ctrl+Shift+R
+- action: Switch to logger
+  hotkey: Ctrl+Shift+L
+- action: Switch to organizer
+  hotkey: Ctrl+Shift+O
+- action: Go to previous tab
+  hotkey: Ctrl+Minus
+- action: Go to next tab
+  hotkey: Ctrl+Equals
+- action: Editor cut
+  hotkey: Ctrl+X
+- action: Editor copy
+  hotkey: Ctrl+C
+- action: Editor paste
+  hotkey: Ctrl+V
+- action: Editor undo
+  hotkey: Ctrl+Z
+- action: Editor redo
+  hotkey: Ctrl+Shift+Z
+- action: Editor select all
+  hotkey: Ctrl+A
+- action: Editor search
+  hotkey: Ctrl+S
+- action: Editor go to previous search match
+  hotkey: Ctrl+Comma
+- action: Editor go to next search match
+  hotkey: Ctrl+Period
+- action: Editor url decode
+  hotkey: Ctrl+Shift+U
+- action: Editor url encode key characters
+  hotkey: Ctrl+U
+- action: Editor url encode all characters
+  hotkey: Ctrl+Y
+- action: Editor html decode
+  hotkey: Ctrl+Shift+H
+- action: Editor html encode key characters
+  hotkey: Ctrl+H
+- action: Editor base64 decode
+  hotkey: Ctrl+Shift+B
+- action: Editor base64 encode
+  hotkey: Ctrl+B
+- action: Editor backspace word
+  hotkey: Ctrl+Backspace
+- action: Editor delete word
+  hotkey: Ctrl+Delete
+- action: Editor delete line
+  hotkey: Ctrl+D
+- action: Editor go to previous word
+  hotkey: Ctrl+Left
+- action: Editor go to previous word extend selection
+  hotkey: Ctrl+Shift+Left
+- action: Editor go to next word
+  hotkey: Ctrl+Right
+- action: Editor go to next word extend selection
+  hotkey: Ctrl+Shift+Right
+- action: Editor go to previous paragraph
+  hotkey: Ctrl+Up
+- action: Editor go to previous paragraph extend selection
+  hotkey: Ctrl+Shift+Up
+- action: Editor go to next paragraph
+  hotkey: Ctrl+Down
+- action: Editor go to next paragraph extend selection
+  hotkey: Ctrl+Shift+Down
+- action: Editor go to start of document
+  hotkey: Ctrl+Home
+- action: Editor go to start of document extend selection
+  hotkey: Ctrl+Shift+Home
+- action: Editor go to end of document
+  hotkey: Ctrl+End
+- action: Editor go to end of document extend selection
+  hotkey: Ctrl+Shift+End

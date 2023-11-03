@@ -2,13 +2,12 @@
 
 # Convert JSON into a table with "description" and "keys" columns
 yaml2table() {
-	# jq --raw-output '.cheatsheet[] | [.action, .hotkey] | @tsv' "$@"
 	yq -M '.shortcuts[] | [.action, .hotkey] | @csv' "$@"
 }
 
 # Generate cheatsheet for chosen application
 generate_cheatsheet() {
-	cheatsheet="$XDG_CONFIG_HOME/cheatmenu/cheatsheets/${application_choice}/${application_choice}.yaml"
+	cheatsheet="$XDG_CONFIG_HOME/cheatmenu/sheets/${application_choice}/${application_choice}.yaml"
 	table=$(yaml2table "$cheatsheet")
 
 	# Check if .json is valid
@@ -52,7 +51,7 @@ if [[ -z $XDG_CONFIG_HOME ]]; then
 fi
 
 # Search for .json files with description key (lazy way to get valid cheatsheets)
-application_choice=$(grep --dereference-recursive --files-with-matches --word-regexp "$XDG_CONFIG_HOME/cheatmenu/cheatsheets/" --regexp '"action":' |
+application_choice=$(grep --dereference-recursive --files-with-matches --word-regexp "$XDG_CONFIG_HOME/cheatmenu/sheets/" --regexp 'action:' |
 	awk -F'/' '{print $(NF-0)}' |
 	cut --fields 1 --delimiter '.' |
 	rofi -dmenu -i -disable-history -tokenized -p "Cheatsheet for")

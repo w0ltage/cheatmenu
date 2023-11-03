@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import yaml
 import json
 import logging
 import sys
@@ -10,7 +11,7 @@ logging.basicConfig(
 
 def burp2json(burp_config_file: str) -> dict:
     """Load burp config file"""
-    logging.info("\nLoading your config file.")
+    logging.info("[+] Loading your config file.")
 
     with open(burp_config_file, "r") as file:
         burp_config = json.load(file)
@@ -28,7 +29,7 @@ def prettify_keys(key: str) -> str:
 def change_keys(burp_json: dict) -> dict:
     """Extract hotkeys array from JSON, prettify them and return"""
 
-    logging.info("\nExtracting and pretiffying your hotkeys.")
+    logging.info("[+] Extracting and pretiffying your hotkeys.")
 
     keys = burp_json['user_options']['misc']['hotkeys']
 
@@ -40,30 +41,30 @@ def change_keys(burp_json: dict) -> dict:
     return keys
 
 
-def create_config(destination_cheatsheet: str, hotkeys: dict):
+def create_config(hotkeys: dict):
     """Create (or overwrite if already exists) config with new hotkeys"""
 
-    logging.info("\nCreating new config at %s", destination_cheatsheet)
+    logging.info("[+] Creating new config at burpsuite.yaml")
 
-    raw_config = {"application": "burpsuite", "cheatsheet": hotkeys}
+    raw_config = {"application": "burpsuite", "shortcuts": hotkeys}
+    config_name = "burpsuite.yaml"
 
-    with open(destination_cheatsheet, 'w', encoding='utf-8') as file:
-        json.dump(raw_config, file)
+    with open(config_name, 'w', encoding='utf-8') as file:
+        yaml.dump(raw_config, file)
 
 def main():
-    if len(sys.argv) == 3:
+    if len(sys.argv) == 2:
         burp_config_file = sys.argv[1]
-        destination_cheatsheet = sys.argv[2]
     else:
-        logging.error(f"Usage: {sys.argv[0]} burpconfig_export.json burpsuite_keys.json\n\n'burpsuite_keys' will be the menu option for your hotkeys,\nso choose destination name wisely.")
+        logging.error(f"Usage: {sys.argv[0]} burpconfig_export.json")
         sys.exit(1)
 
     burp_json = burp2json(burp_config_file)
     hotkeys = change_keys(burp_json)
 
-    create_config(destination_cheatsheet, hotkeys)
+    create_config(hotkeys)
 
-    logging.info("\nConfig created. Enjoy your cheatsheet!")
+    logging.info("[+] Config created. Enjoy your cheatsheet!")
         
 
 

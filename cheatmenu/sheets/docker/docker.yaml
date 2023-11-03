@@ -1,0 +1,4 @@
+application: docker
+shortcuts:
+- action: Delete all containers, images and networks
+  hotkeys: docker system prune -a 
