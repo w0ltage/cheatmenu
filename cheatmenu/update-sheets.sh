@@ -7,8 +7,8 @@ printf "[+] Updating cheatsheets"
 
 if ! cd sheets && git pull "$sheets_repo";
 then
-    printf "[-] Updating failed."
+    printf "\n[-] Updating failed.\n"
 else
-    printf "[+] Updated!"
+    printf "\n[+] Updated!\n"
 fi
 

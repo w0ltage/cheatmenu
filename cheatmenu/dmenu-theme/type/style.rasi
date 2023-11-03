@@ -20,8 +20,19 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "colors.rasi"
-@import                          "fonts.rasi"
+
+* {
+    background:     #282828FF;
+    background-alt: #353535FF;
+    foreground:     #EBDBB2FF;
+    selected:       #F5B78AFF;
+    active:         #B8BB26FF;
+    urgent:         #FB4934FF;
+}
+
+* {
+    font: "JetBrains Mono Nerd Font 10";
+}
 
 * {
     border-colour:               var(selected);
