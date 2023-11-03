@@ -1,0 +1,185 @@
+{
+  "application": "burpsuite",
+  "cheatsheet": [
+    {
+      "action":"send to repeater",
+      "hotkey":"Ctrl+R"
+    },
+    {
+      "action":"send to intruder",
+      "hotkey":"Ctrl+I"
+    },
+    {
+      "action":"send to organizer",
+      "hotkey":"Ctrl+O"
+    },
+    {
+      "action":"forward intercepted proxy message",
+      "hotkey":"Ctrl+F"
+    },
+    {
+      "action":"toggle proxy interception",
+      "hotkey":"Ctrl+T"
+    },
+    {
+      "action":"issue repeater request",
+      "hotkey":"Ctrl+Space"
+    },
+    {
+      "action":"switch to dashboard",
+      "hotkey":"Ctrl+Shift+D"
+    },
+    {
+      "action":"switch to target",
+      "hotkey":"Ctrl+Shift+T"
+    },
+    {
+      "action":"switch to proxy",
+      "hotkey":"Ctrl+Shift+P"
+    },
+    {
+      "action":"switch to intruder",
+      "hotkey":"Ctrl+Shift+I"
+    },
+    {
+      "action":"switch to repeater",
+      "hotkey":"Ctrl+Shift+R"
+    },
+    {
+      "action":"switch to logger",
+      "hotkey":"Ctrl+Shift+L"
+    },
+    {
+      "action":"switch to organizer",
+      "hotkey":"Ctrl+Shift+O"
+    },
+    {
+      "action":"go to previous tab",
+      "hotkey":"Ctrl+Minus"
+    },
+    {
+      "action":"go to next tab",
+      "hotkey":"Ctrl+Equals"
+    },
+    {
+      "action":"editor cut",
+      "hotkey":"Ctrl+X"
+    },
+    {
+      "action":"editor copy",
+      "hotkey":"Ctrl+C"
+    },
+    {
+      "action":"editor paste",
+      "hotkey":"Ctrl+V"
+    },
+    {
+      "action":"editor undo",
+      "hotkey":"Ctrl+Z"
+    },
+    {
+      "action":"editor redo",
+      "hotkey":"Ctrl+Y"
+    },
+    {
+      "action":"editor select all",
+      "hotkey":"Ctrl+A"
+    },
+    {
+      "action":"editor search",
+      "hotkey":"Ctrl+S"
+    },
+    {
+      "action":"editor go to previous search match",
+      "hotkey":"Ctrl+Comma"
+    },
+    {
+      "action":"editor go to next search match",
+      "hotkey":"Ctrl+Period"
+    },
+    {
+      "action":"editor url decode",
+      "hotkey":"Ctrl+Shift+U"
+    },
+    {
+      "action":"editor url encode key characters",
+      "hotkey":"Ctrl+U"
+    },
+    {
+      "action":"editor html decode",
+      "hotkey":"Ctrl+Shift+H"
+    },
+    {
+      "action":"editor html encode key characters",
+      "hotkey":"Ctrl+H"
+    },
+    {
+      "action":"editor base64 decode",
+      "hotkey":"Ctrl+Shift+B"
+    },
+    {
+      "action":"editor base64 encode",
+      "hotkey":"Ctrl+B"
+    },
+    {
+      "action":"editor backspace word",
+      "hotkey":"Ctrl+Backspace"
+    },
+    {
+      "action":"editor delete word",
+      "hotkey":"Ctrl+Delete"
+    },
+    {
+      "action":"editor delete line",
+      "hotkey":"Ctrl+D"
+    },
+    {
+      "action":"editor go to previous word",
+      "hotkey":"Ctrl+Left"
+    },
+    {
+      "action":"editor go to previous word extend selection",
+      "hotkey":"Ctrl+Shift+Left"
+    },
+    {
+      "action":"editor go to next word",
+      "hotkey":"Ctrl+Right"
+    },
+    {
+      "action":"editor go to next word extend selection",
+      "hotkey":"Ctrl+Shift+Right"
+    },
+    {
+      "action":"editor go to previous paragraph",
+      "hotkey":"Ctrl+Up"
+    },
+    {
+      "action":"editor go to previous paragraph extend selection",
+      "hotkey":"Ctrl+Shift+Up"
+    },
+    {
+      "action":"editor go to next paragraph",
+      "hotkey":"Ctrl+Down"
+    },
+    {
+      "action":"editor go to next paragraph extend selection",
+      "hotkey":"Ctrl+Shift+Down"
+    },
+    {
+      "action":"editor go to start of document",
+      "hotkey":"Ctrl+Home"
+    },
+    {
+      "action":"editor go to start of document extend selection",
+      "hotkey":"Ctrl+Shift+Home"
+    },
+    {
+      "action":"editor go to end of document",
+      "hotkey":"Ctrl+End"
+    },
+    {
+      "action":"editor go to end of document extend selection",
+      "hotkey":"Ctrl+Shift+End"
+    }
+  ]
+}
