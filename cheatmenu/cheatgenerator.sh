@@ -24,7 +24,7 @@ generate_cheatsheet() {
 		<(printf "%s" "$table") |
         # pass the separated columns to rofi dmenu
 		rofi \
-			-dmenu -p "Find shortcut far " \
+			-dmenu -p "Find shortcut for " \
 			-i -markup-rows -no-show-icons \
 			-width 700 -lines 15 -yoffset 30 \
 			-font "ClearSandMedium 11" |
@@ -53,7 +53,7 @@ fi
 application_choice=$(grep --dereference-recursive --files-with-matches --word-regexp "$XDG_CONFIG_HOME/cheatmenu/sheets/" --regexp 'action:' |
 	awk -F'/' '{print $(NF-0)}' |
 	cut --fields 1 --delimiter '.' |
-	rofi -dmenu -i -disable-history -tokenized -p "Cheatsheet for")
+	rofi -dmenu -i -disable-history -tokenized -p "Cheatsheet for" -font "ClearSandMedium 11")
 
 # Start cheatmenu
 if choose_cheatmenu; then
