@@ -2,7 +2,7 @@
 
 # Convert JSON into a table with "description" and "keys" columns
 yaml2table() {
-	yq -M '.shortcuts[] | [.action, .hotkey] | @csv' "$@"
+	yq -M '.shortcuts[] | [.action, .hotkey] | @tsv' "$@"
 }
 
 # Generate cheatsheet for chosen application
@@ -19,8 +19,8 @@ generate_cheatsheet() {
     # Replace , in CSV table with '    | ' to separate columns
 	column \
 		--table \
-		--separator $',' \
-        --output-separator '     | ' \
+		--separator $'\t' \
+        --output-separator $'\t' \
 		<(printf "%s" "$table") |
         # pass the separated columns to rofi dmenu
 		rofi \
@@ -29,8 +29,7 @@ generate_cheatsheet() {
 			-width 700 -lines 15 -yoffset 30 \
 			-font "ClearSandMedium 11" |
                 # copy everything after delimeter '|' to clipboard
-                cut --fields 2 \
-                    --delimiter '|' |
+                cut --fields 2 |
                     xclip -selection clipboard
 
 }

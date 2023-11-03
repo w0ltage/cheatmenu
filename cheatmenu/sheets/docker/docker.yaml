@@ -1,4 +1,8 @@
 application: docker
 shortcuts:
 - action: Delete all containers, images and networks
-  hotkeys: docker system prune -a 
+  hotkey: docker system prune -a 
+- action: Shell into container
+  hotkey: docker exec -it CONTAINER bash
+- action: Show logs from a container
+  hotkey: docker logs CONTAINER
