@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+# if using wayland, then wofi will be used for dmenu
+# if using xorg, then rofi will be used for dmenu
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    dmenu_command="wofi --show dmenu --style $XDG_CONFIG_HOME/cheatmenu/cheatmenu/dmenu-theme/wofi-gruvbox.css"
+elif [ "$XDG_SESSION_TYPE" == "x11" ]; then
+	dmenu_command="rofi -dmenu -theme $XDG_CONFIG_HOME/cheatmenu/dmenu-theme/rofi-gruvbox.rasi" 
+else 
+    printf "\n[!] Didn't find your session type. Closing your reality."
+    exit 1
+fi
+
+
 # Convert JSON into a table with "description" and "keys" columns
 yaml2table() {
 	yq -M '.shortcuts[] | [.action, .hotkey] | @tsv' "$@"
@@ -23,8 +35,7 @@ generate_cheatsheet() {
         --output-separator $'\t' \
 		<(printf "%s" "$table") |
         # pass the separated columns to rofi dmenu
-		rofi -dmenu \
-			-theme "$XDG_CONFIG_HOME/cheatmenu/dmenu-theme/type/style.rasi" |
+            $dmenu_command |
                 # copy everything after delimeter '|' to clipboard
                 cut --fields 2 |
                     xclip -selection clipboard
@@ -50,8 +61,7 @@ fi
 application_choice=$(grep --dereference-recursive --files-with-matches --word-regexp "$XDG_CONFIG_HOME/cheatmenu/sheets/" --regexp 'action:' |
 	awk -F'/' '{print $(NF-0)}' |
 	cut --fields 1 --delimiter '.' |
-	rofi -dmenu \
-        -theme "$XDG_CONFIG_HOME/cheatmenu/dmenu-theme/type/style.rasi")
+    $dmenu_command)
 
 # Start cheatmenu
 if choose_cheatmenu; then
