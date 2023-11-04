@@ -14,7 +14,7 @@ fi
 
 # Convert JSON into a table with "description" and "keys" columns
 yaml2table() {
-	yq -M '.shortcuts[] | [.action, .hotkey] | @tsv' "$@"
+	yq -M '.shortcuts[] | [.action, .command] | @tsv' "$@"
 }
 
 # Generate cheatsheet for chosen application

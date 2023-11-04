@@ -106,7 +106,9 @@ else
         printf "\n[!] Depencies installation is cancelled.\n\n"
     fi
 
-    create_link
+    if create_link; then
+        "$XDG_CONFIG_HOME/cheatmenu/update-sheets.sh"
+    fi
 
 fi
 
