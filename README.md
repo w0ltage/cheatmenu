@@ -41,9 +41,9 @@ Next, cheatmenu parses the YAML file for the selected application and sends it t
 
 After selecting a line of the cheat sheet, cheatmenu copies the command value to the clipboard.
 
-<h1 align="center">
+<p align="center">
   <img src="assets/rofi/rofi-using-nmap.gif" width="600px" alt="rofi-using-nmap.gif">
-</h1>
+</p>
 
 | :exclamation:  **Disclaimer**  |
 |---------------------------------|
