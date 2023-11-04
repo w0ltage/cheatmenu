@@ -9,7 +9,8 @@ create_link() {
     else
         printf "\n\n[+] $PWD \n    is linked to %s/cheatmenu\n\n" "$XDG_CONFIG_HOME"  
         printf "Now you need to map a shortcut to execute\n'%s/.config/cheatmenu/cheatgenerator.sh'.\n\n" "$HOME"
-        printf "For example, I'm using a combination\n'super + alt + Home' to execute the cheatgenerator.sh\n"
+        printf "For example, I'm using a combination\n'super + alt + Home' to execute\n"
+        printf "\"\$XDG_CONFIG_HOME/cheatmenu/cheatgenerator.sh\"\n\n"
     fi
 }
 
@@ -98,7 +99,7 @@ else
     fi
 
 
-    read -n 1 -p "\nInstall go-yq rofi and xclip? (y/n) " answer
+    read -n 1 -p "Install go-yq rofi and xclip? (y/n) " answer
 
     if [ "$answer" != "${answer#[Yy]}" ];then
         install_dependencies
@@ -107,8 +108,7 @@ else
     fi
 
     if create_link; then
-        "$XDG_CONFIG_HOME/cheatmenu/update-sheets.sh"
+        "$XDG_CONFIG_HOME/cheatmenu/cheatmenu/update-sheets.sh"
     fi
-
 fi
 
