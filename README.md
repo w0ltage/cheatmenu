@@ -6,7 +6,7 @@
   <a href="#use-cases">Use cases</a> •
   <a href="#how-it-works">How it works</a> •
   <a href="#install-cheatmenu">Install</a> •
-  <a href="#creation-of-a-cheatsheet">Creation of a cheat sheet</a> •
+  <a href="#how-to-create-a-cheat-sheet">How to create a cheatsheet</a> •
   <a href="#wayland-support">Wayland support</a>
 </p>
 
@@ -90,7 +90,7 @@ If everything works as in the screenshots above, all you have to do is assign a 
 
 For example, I'm using a combination `super + alt + Home` to execute `"$XDG_CONFIG_HOME/cheatmenu/cheatgenerator.sh"`
 
-## Creation of a cheat sheet
+## How to create a cheatsheet
 
 A cheat sheet is defined in a YAML file with following structure:
 
