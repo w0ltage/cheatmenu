@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sheets_repo="https://github.com/tokiakasu/cheatmenu-sheets.git"
-sheets_dir="$XDG_CONFIG_HOME/cheatmenu/cheatmenu/sheets/"
+sheets_dir="$XDG_CONFIG_HOME/cheatmenu/sheets/"
 
 printf "\n\n[+] Updating cheatsheets\n\n"
 

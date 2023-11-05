@@ -1,13 +1,14 @@
 #!/bin/bash
 
 create_link() {
-    cheatmenu_directory="$XDG_CONFIG_HOME/cheatmenu" \
-        && ln -nsf "$PWD" "$cheatmenu_directory"
+    cheatmenu_location="$(find ~+ -type f -name "setup.sh" -path '*/cheatmenu/*' -printf '%h\n')"
+    
+    ln -nsf "$cheatmenu_location" "$XDG_CONFIG_HOME/cheatmenu"
 
     if [[ $? -eq 1 ]]; then
         printf "Something goes wrong.\n\t- Did you run %s inside the repository?\n\t- Check if there's no file called 'cheatmenu' in %s/.config is\n" "$0" "$HOME"
     else
-        printf "\n\n[+] $PWD \n    is linked to %s/cheatmenu\n\n" "$XDG_CONFIG_HOME"  
+        printf "\n\n[+] $cheatmenu_location \n    is linked to %s/cheatmenu\n\n" "$XDG_CONFIG_HOME"  
         printf "Now you need to map a shortcut to execute\n'%s/.config/cheatmenu/cheatgenerator.sh'.\n\n" "$HOME"
         printf "For example, I'm using a combination\n'super + alt + Home' to execute\n"
         printf "\"\$XDG_CONFIG_HOME/cheatmenu/cheatgenerator.sh\"\n\n"
