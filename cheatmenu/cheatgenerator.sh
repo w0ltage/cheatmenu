@@ -58,7 +58,7 @@ if [[ -z $XDG_CONFIG_HOME ]]; then
 fi
 
 # Search for .json files with description key (lazy way to get valid cheatsheets)
-application_choice=$(grep --dereference-recursive --files-with-matches --word-regexp "$XDG_CONFIG_HOME/cheatmenu/sheets/" --regexp 'action:' |
+application_choice=$(grep --dereference-recursive --files-with-matches --word-regexp "$XDG_CONFIG_HOME/cheatmenu/sheets/" --regexp 'action:' --exclude-dir=.github |
 	awk -F'/' '{print $(NF-0)}' |
 	cut --fields 1 --delimiter '.' |
     $dmenu_command)
