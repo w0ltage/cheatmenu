@@ -108,7 +108,7 @@ else
     fi
 
     if create_link; then
-        "$XDG_CONFIG_HOME/cheatmenu/cheatmenu/update-sheets.sh"
+        "$XDG_CONFIG_HOME/cheatmenu/update-sheets.sh"
     fi
 fi
 
