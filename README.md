@@ -66,9 +66,27 @@ cd cheatmenu
 ./cheatmenu/setup.sh
 ```
 
+### Check if everything works
+
 Everything installed and there is no `[-]` in the script logs?
 
-Now you need to map a shortcut to execute `$XDG_CONFIG_HOME/cheatmenu/cheatgenerator.sh`
+That's awesome! Now try to run `$XDG_CONFIG_HOME/cheatmenu/cheatgenerator.sh` from CLI. 
+
+The application selection menu should appear, as in the screenshot below.
+
+<p align="center">
+  <img src="assets/rofi/rofi-entrance.png" width="600px" alt="rofi-entrance.png">
+</p>
+
+Select `nmap`. A new menu should have appeared, but with nmap cheat sheets.
+
+<p align="center">
+  <img src="assets/rofi/rofi-nmap.png" width="600px" alt="rofi-nmap.png">
+</p>
+
+### How to use
+
+If everything works as in the screenshots above, all you have to do is assign a hotkey combination to execute the `$XDG_CONFIG_HOME/cheatmenu/cheatgenerator.sh` script.
 
 For example, I'm using a combination `super + alt + Home` to execute `"$XDG_CONFIG_HOME/cheatmenu/cheatgenerator.sh"`
 
