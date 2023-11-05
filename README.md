@@ -90,7 +90,7 @@ If everything works as in the screenshots above, all you have to do is assign a 
 
 For example, I'm using a combination `super + alt + Home` to execute `"$XDG_CONFIG_HOME/cheatmenu/cheatgenerator.sh"`
 
-## How to create a cheatsheet
+## How to create a cheat sheet
 
 A cheat sheet is defined in a YAML file with following structure:
 
